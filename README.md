@@ -43,9 +43,9 @@ HTML generated
 ```
 
 ### Advanced
-values, keys : [:names, :nums, :alpha2s, :alpha3s]
-selected      : set default value
-prompt       : message
+* values, keys : [:names, :nums, :alpha2s, :alpha3s]
+* selected      : set default value
+* prompt       : message
 
 ```rails
 <%= form_for @user do |f| %>
