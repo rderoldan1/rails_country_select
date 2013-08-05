@@ -1,7 +1,8 @@
 # RailsCountrySelect
-This project is based on Rails 2 plugin created by LukeCarrier [rails-country-select](https://github.com/rderoldan1/rails-country-select/blob/master/lib/country_definitions.rb)
 
-Select tag in order to choose a country in your forms, provides 4 options.
+Rails 3 gem for Select tag in order to choose a country in your forms, provides 4 options.
+
+*This project is based on Rails 2 plugin created by LukeCarrier [rails-country-select](https://github.com/rderoldan1/rails-country-select/blob/master/lib/country_definitions.rb)*
 
 1. Country Name.
 2. Cod
