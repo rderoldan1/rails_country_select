@@ -1,6 +1,8 @@
 # RailsCountrySelect
 This project is based on Rails 2 plugin created by LukeCarrier [rails-country-select](https://github.com/rderoldan1/rails-country-select/blob/master/lib/country_definitions.rb)
+
 Select tag in order to choose a country in your forms, provides 4 options.
+
 1. Country Name.
 2. Cod
 3. ISO cod 2 chars ('CO', 'AF', 'AX', 'AL')
@@ -27,7 +29,7 @@ Or install it yourself as:
 ### Basic
 value : country cod number
 text  : country name
-```ruby
+```rails
 <%= form_for @user do |f| %>
     <%= f.country_select :country %>
 <% end %>
@@ -40,26 +42,28 @@ HTML generated
     <option value="248">Albania</option>
     <option value="8">Ãland Islands</option>
     <option value="12">Algeria</option>
-``
+```
 
 ### Advanced
-values, keys : [:names, :nums, :alpha2s, :alpha3s]
-selected      : set default value
-prompt       : message
-```ruby
+* values, keys : [:names, :nums, :alpha2s, :alpha3s]
+* selected      : set default value
+* prompt       : message
+
+```rails
 <%= form_for @user do |f| %>
     <%= f.country_select :country, {:keys => :names, :values => :alpha2s, :selected => "CO"}, :prompt => "Choose a country"
 <% end %>
 ```
 
 HTML generated
+
 ```html
 <select id="cliente_nacionalidad" name="user[country]" prompt="Choose a country" value="CO">
     <option value="AF">Afghanistan</option>
     <option value="AL">Albania</option>
     <option value="AX">Ãland Islands</option>
     <option value="DZ">Algeria</option>
-``
+```
 
 
 ### Show country info
@@ -102,7 +106,6 @@ country(:alpha3s => "USA", :alpha2s => "US", :num => 840, :name => "United State
 <p>Country Apha2s: <%= country(:num => @user.country_num)[2] %><p>
 <p>Country Apha3s: <%= country(:num => @user.country_num)[3] %><p>
 ```
-
 
 ## Contributing
 
