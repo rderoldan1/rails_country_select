@@ -181,7 +181,7 @@ COUNTRY_NAMES   = [
     'Portugal',
     'Puerto Rico',
     'Qatar',
-    'RÃ©union',
+    'Reunion',
     'Romania',
     'Russian Federation',
     'Rwanda',

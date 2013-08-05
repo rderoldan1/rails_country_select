@@ -110,6 +110,29 @@ Assuming that your User model store country cod.
 <p>Country Apha3s: <%= country(:num => @user.country_num)[3] %><p>
 ```
 
+### Locales
+
+By default all county names are in english, but you can change this behavior by include country names in
+your locale file under `countries:` scope
+
+```yml
+es:
+ countries:
+    AC: "Isla de la Ascensión"
+    AD: "Andorra"
+    AE: "Emiratos Árabes Unidos"
+    AF: "Afganistán"
+    AG: "Antigua y Barbuda"
+    AI: "Anguila"
+    AL: "Albania"
+    AM: "Armenia"
+```
+
+Please look at [@onomojo](https://github.com/onomojo) [repo](https://github.com/onomojo/i18n-country-translations/tree/master/rails/locale) for all translations
+
+
+
+
 ## Contributing
 
 1. Fork it

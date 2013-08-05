@@ -12,12 +12,12 @@ if defined?(Rails) && defined?(ActionView)
           options[:values]  = :nums  unless options.has_key?(:values)
 
           potential = {
-              :names   => COUNTRY_NAMES,
+              :names   => translate_countries,
               :nums    => COUNTRY_NUMS,
               :alpha2s => COUNTRY_ALPHA2S,
               :alpha3s => COUNTRY_ALPHA3S
           }
-
+          
           select_options = potential[options[:keys]].zip(potential[options[:values]])
           InstanceTag.new(object, method, self, options.delete(:object)).to_select_tag(select_options, options, html_options)
         end
@@ -32,12 +32,19 @@ if defined?(Rails) && defined?(ActionView)
       # get country info given some params
       def country(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
         result = []
-        COUNTRY_NUMS.zip(COUNTRY_NAMES, COUNTRY_ALPHA2S, COUNTRY_ALPHA3S).each do |country|
-          if options[:nums].to_i.eql?(country[0]) || options[:name].eql?(country[1]) || options[:alpha2s].eql?(country[2]) || options[:alpha3s].eql?(country[3])
-            result = country
+        COUNTRY_NUMS.zip(translate_countries, COUNTRY_ALPHA2S, COUNTRY_ALPHA3S).each do |country|
+          if options[:num].to_i.eql?(country[0]) || options[:name].eql?(country[1]) || options[:alpha2s].eql?(country[2]) || options[:alpha3s].eql?(country[3])
+           result = country
           end
         end
         result
+      end
+
+      private
+      def translate_countries
+        COUNTRY_ALPHA2S.zip(COUNTRY_NAMES).map do |code, name|
+          I18n.t(code, :scope => :countries, :default => name)
+        end
       end
     end
   end

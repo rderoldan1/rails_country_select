@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rderoldan1@gmail.com"]
   spec.description   = %q{Select tag for countries in rails form, based in  LukeCarrier rails 2 plugin }
   spec.summary       = %q{Select tag for countries in rails form}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/rderoldan1/rails_country_select"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
