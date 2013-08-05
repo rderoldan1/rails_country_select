@@ -6,6 +6,8 @@ Select tag in order to choose a country in your forms, provides 4 options.
 3. ISO cod 2 chars ('CO', 'AF', 'AX', 'AL')
 4. ISO cod 3 chars ('COL', 'AFG', 'ALA', ALB')
 
+Also includes a Helper method in order to get all country info.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -58,6 +60,50 @@ HTML generated
     <option value="AX">Ãland Islands</option>
     <option value="DZ">Algeria</option>
 ``
+
+
+### Show country info
+A helper method is available to get all the country info in the views, it return an array, the usage is.
+
+Find by name
+```ruby
+country(:name => "Colombia")
+[170, "Colombia", "CO", "COL"]
+```
+
+Find by Cod
+```ruby
+country(:num => 12)
+[12, "Algeria", "DZ", "DZA"]
+```
+
+Find by Alpha2s
+```ruby
+country(:alpha2s => "AR")
+[32, "Argentina", "AR", "ARG"]
+```
+
+Find by Alpha3s
+```ruby
+country(:alpha3s => "USA")
+[840, "United States", "US", "USA"]
+```
+
+Also you can mix all the options hash, example
+```ruby
+country(:alpha3s => "USA", :alpha2s => "US", :num => 840, :name => "United States")
+[840, "United States", "US", "USA"]
+```
+
+
+```html
+<p>Country Cod: <%= country(:num => @user.country_num)[0] %><p>
+<p>Country Name: <%= country(:num => @user.country_num)[1] %><p>
+<p>Country Apha2s: <%= country(:num => @user.country_num)[2] %><p>
+<p>Country Apha3s: <%= country(:num => @user.country_num)[3] %><p>
+```
+
+
 ## Contributing
 
 1. Fork it
