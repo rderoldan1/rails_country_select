@@ -1,4 +1,4 @@
-# RailsCountrySelect
+# RailsCountrySelect [![Gem Version](https://badge.fury.io/rb/rails_country_select.png)](http://badge.fury.io/rb/rails_country_select) [![Code Climate](https://codeclimate.com/github/rderoldan1/rails_country_select.png)](https://codeclimate.com/github/rderoldan1/rails_country_select)
 
 Rails 3 gem for Select tag in order to choose a country in your forms, provides 4 options.
 
