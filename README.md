@@ -99,8 +99,10 @@ country(:alpha3s => "USA", :alpha2s => "US", :num => 840, :name => "United State
 [840, "United States", "US", "USA"]
 ```
 
+#### Usage in views
 
-```html
+Assuming that your User model store country cod.
+```rails
 <p>Country Cod: <%= country(:num => @user.country_num)[0] %><p>
 <p>Country Name: <%= country(:num => @user.country_num)[1] %><p>
 <p>Country Apha2s: <%= country(:num => @user.country_num)[2] %><p>
