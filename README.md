@@ -28,8 +28,8 @@ Or install it yourself as:
 ## Usage
 
 ### Basic
-value : country cod number
-text  : country name
+* value : country cod number
+* text  : country name
 ```rails
 <%= form_for @user do |f| %>
     <%= f.country_select :country %>
