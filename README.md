@@ -30,6 +30,7 @@ Or install it yourself as:
 ### Basic
 * value : country cod number
 * text  : country name
+
 ```rails
 <%= form_for @user do |f| %>
     <%= f.country_select :country %>
