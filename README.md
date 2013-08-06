@@ -38,7 +38,7 @@ text  : country name
 
 HTML generated
 ```html
- <select id="cliente_nacionalidad" name="user[country]">
+ <select id="user_country" name="user[country]">
     <option value="4">Afghanistan</option>
     <option value="248">Albania</option>
     <option value="8">Ãland Islands</option>
@@ -59,7 +59,7 @@ HTML generated
 HTML generated
 
 ```html
-<select id="cliente_nacionalidad" name="user[country]" prompt="Choose a country" value="CO">
+<select id="user_country" name="user[country]" prompt="Choose a country" value="CO">
     <option value="AF">Afghanistan</option>
     <option value="AL">Albania</option>
     <option value="AX">Ãland Islands</option>
