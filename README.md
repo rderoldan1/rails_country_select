@@ -67,7 +67,7 @@ HTML generated
 ```
 
 
-### Show country info
+### Show country info in array
 A helper method is available to get all the country info in the views, it return an array, the usage is.
 
 Find by name
@@ -100,6 +100,21 @@ country(:alpha3s => "USA", :alpha2s => "US", :num => 840, :name => "United State
 [840, "United States", "US", "USA"]
 ```
 
+#### Show specific country info
+All the methods receive a hash options :name, :cod, :alpha2s, :alpha3s
+```ruby
+country_name :num => "170"
+=> "Colombia"
+
+country_cod :name => "Colombia"
+=> 170
+country_alpha2s :num => "170"
+=> "CO"
+
+country_alpha3s :num => "170"
+=> "COL"
+
+
 #### Usage in views
 
 Assuming that your User model store country cod.
@@ -108,6 +123,12 @@ Assuming that your User model store country cod.
 <p>Country Name: <%= country(:num => @user.country_num)[1] %><p>
 <p>Country Apha2s: <%= country(:num => @user.country_num)[2] %><p>
 <p>Country Apha3s: <%= country(:num => @user.country_num)[3] %><p>
+
+<p>Country Cod: <%= country_cod(:num => @user.country_num) %><p>
+<p>Country Name: <%= country_name(:num => @user.country_num) %><p>
+<p>Country Apha2s: <%= country_alpha2s(:num => @user.country_num) %><p>
+<p>Country Apha3s: <%= country_alpha3s(:num => @user.country_num) %><p>
+
 ```
 
 ### Locales
