@@ -113,7 +113,7 @@ country_alpha2s :num => "170"
 
 country_alpha3s :num => "170"
 => "COL"
-
+```
 
 #### Usage in views
 
