@@ -40,6 +40,26 @@ if defined?(Rails) && defined?(ActionView)
         result
       end
 
+      #get country name
+      def country_name(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
+        country(options)[1]
+      end
+
+      #get country cod
+      def country_cod(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
+        country(options)[0]
+      end
+
+      #get country alpha2s
+      def country_alpha2s(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
+        country(options)[2]
+      end
+
+      #get country alpha3s
+      def country_alpha3s(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
+        country(options)[3]
+      end
+
       private
       def translate_countries
         COUNTRY_ALPHA2S.zip(COUNTRY_NAMES).map do |code, name|
