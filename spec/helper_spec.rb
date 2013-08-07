@@ -1,5 +1,5 @@
 require 'rspec'
-require File.expand_path('../../lib/rails_country_select', __FILE__)
+
 
 require 'action_view'
 require 'action_view/helpers'

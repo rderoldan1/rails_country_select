@@ -1,7 +1,7 @@
 require 'rspec'
-require File.expand_path('../../lib/country_definitions', __FILE__)
 
-describe 'helper' do
+
+describe 'helper methods' do
 
   it 'should include countries names' do
     names = COUNTRY_NAMES
