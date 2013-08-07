@@ -1,4 +1,5 @@
 require 'rspec'
+require 'spec_helper'
 
 
 describe 'helper methods' do

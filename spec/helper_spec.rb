@@ -1,11 +1,6 @@
 require 'rspec'
+require 'spec_helper'
 
-
-require 'action_view'
-require 'action_view/helpers'
-require 'i18n'
-
-include ActionView::Helpers
 describe 'Helper methods' do
 
   it 'should find country name' do
