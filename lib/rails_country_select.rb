@@ -2,7 +2,7 @@
 require "rails_country_select/version"
 require File.expand_path('../country_definitions', __FILE__)
 
-if defined?(Rails) && defined?(ActionView)
+#if defined?(Rails) && defined?(ActionView)
   module ActionView
     module Helpers
       autoload :CountryHelper, 'rails_country_select/helpers/rails_country_select'
@@ -72,5 +72,5 @@ if defined?(Rails) && defined?(ActionView)
       end
     end
   end
-end
+#end
 
