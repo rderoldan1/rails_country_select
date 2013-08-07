@@ -14,5 +14,6 @@ require 'i18n'
 include ActionView::Helpers
 include ActionView::Helpers::FormOptionsHelper
 include ActionView::Helpers::FormHelper
+include ActionView::Helpers::TagHelper
 RSpec.configure do |config|
 end
