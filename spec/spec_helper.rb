@@ -2,10 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'coveralls'
 
-require 'action_view'
-require 'action_view/helpers'
-require 'i18n'
-Coveralls.wear!
+Coveralls.wear! 'rails'
 
 require "rails_country_select"
 
