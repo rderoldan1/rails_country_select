@@ -33,7 +33,7 @@ if defined?(Rails) && defined?(ActionView)
       def country(options = {:name => "", :num =>"", :alpha2s => "", :alpha3s => ""})
         result = []
         COUNTRY_NUMS.zip(translate_countries, COUNTRY_ALPHA2S, COUNTRY_ALPHA3S).each do |country|
-          if options[:num].to_i.eql?(country[0]) || options[:name].eql?(country[1]) || options[:alpha2s].eql?(country[2]) || options[:alpha3s].eql?(country[3])
+          if find_country(options, country)
            result = country
           end
         end
@@ -65,6 +65,10 @@ if defined?(Rails) && defined?(ActionView)
         COUNTRY_ALPHA2S.zip(COUNTRY_NAMES).map do |code, name|
           I18n.t(code, :scope => :countries, :default => name)
         end
+      end
+
+      def find_country(options, country)
+        options[:num].to_i.eql?(country[0]) || options[:name].eql?(country[1]) || options[:alpha2s].eql?(country[2]) || options[:alpha3s].eql?(country[3])
       end
     end
   end
