@@ -4,4 +4,4 @@ source 'https://rubygems.org'
 gemspec
 gem 'rspec'
 gem 'coveralls', :require => false
-gem 'rails'
+gem 'rails', '~> 3.0.0'
