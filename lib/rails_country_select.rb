@@ -19,7 +19,7 @@ require File.expand_path('../country_definitions', __FILE__)
           }
           
           select_options = potential[options[:keys]].zip(potential[options[:values]])
-          InstanceTag.new(object, method, self, options.delete(:object)).to_select_tag(select_options, options, html_options)
+          ActiveModelInstanceTag.new(object, method, self, options.delete(:object)).to_select_tag(select_options, options, html_options)
         end
       end
 
