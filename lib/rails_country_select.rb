@@ -3,7 +3,7 @@ require "rails_country_select/version"
 require File.expand_path('../country_definitions', __FILE__)
 
 #if defined?(Rails) && defined?(ActionView)
-  module ActionView
+	  module ActionView
     module Helpers
       autoload :CountryHelper, 'rails_country_select/helpers/rails_country_select'
       module FormOptionsHelper
@@ -17,7 +17,7 @@ require File.expand_path('../country_definitions', __FILE__)
               :alpha2s => COUNTRY_ALPHA2S,
               :alpha3s => COUNTRY_ALPHA3S
           }
-          options = options.delete(:object)
+          #options = options.delete(:object)
           select_options = potential[options[:keys]].zip(potential[options[:values]])
           Tags::Select.new(object, method, self, select_options, options, html_options)
         end
@@ -25,7 +25,7 @@ require File.expand_path('../country_definitions', __FILE__)
 
       class FormBuilder
         def country_select(method, options = {}, html_options = {})
-          @template.country_select(@object_name, method, options.merge({:object => @object}), html_options)
+          @template.country_select(@object_name, method, options, html_options)
         end
       end
 
