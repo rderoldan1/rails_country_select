@@ -1,3 +1,3 @@
 module RailsCountrySelect
-  VERSION = "1.0.4.pre9"
+  VERSION = "1.0.5"
 end
