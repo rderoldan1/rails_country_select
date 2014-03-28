@@ -19,7 +19,8 @@ require File.expand_path('../country_definitions', __FILE__)
           }
           #options = options.delete(:object)
           select_options = potential[options[:keys]].zip(potential[options[:values]])
-          Tags::Select.new(object, method, self, select_options, options, html_options)
+          select_tag(method, options_for_select(select_options),options,html_options)
+          #Tags::Select.new(object, method, self, select_options, options, html_options)
         end
       end
 
